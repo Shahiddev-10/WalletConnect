@@ -1,0 +1,78 @@
+{
+	"name": "cenx-stack",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@tanstack/react-query": "^5.29.2",
+		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/react": "^15.0.1",
+		"@testing-library/user-event": "^14.5.2",
+		"@web3modal/wagmi": "^4.1.7",
+		"body-parser": "^1.19.0",
+		"chai": "5.1.0",
+		"chalk": "^5.3.0",
+		"child_process": "^1.0.2",
+		"concurrently": "8.2.2",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"dotenv": "^16.4.5",
+		"express": "^4.17.1",
+		"express-ws": "^5.0.2",
+		"fs": "^0.0.1-security",
+		"moment": "^2.29.1",
+		"nodemon": "^3.1.0",
+		"path": "^0.12.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.14.1",
+		"react-scripts": "5.0.1",
+		"react-toastify": "^10.0.5",
+		"request": "^2.88.2",
+		"sequelize": "^6.37.2",
+		"sqlite3": "^5.1.6",
+		"viem": "^2.9.16",
+		"wagmi": "^2.5.19",
+		"web-vitals": "^3.5.2",
+		"web3": "^4.7.0"
+	},
+	"devDependencies": {
+		"assert": "^2.0.0",
+		"buffer": "^6.0.3",
+		"crypto-browserify": "^3.12.0",
+		"https-browserify": "^1.0.0",
+		"os-browserify": "^0.3.0",
+		"process": "^0.11.10",
+		"react-app-rewired": "^2.2.1",
+		"stream-browserify": "^3.0.0",
+		"stream-http": "^3.2.0",
+		"url": "^0.11.0"
+	},
+	"scripts": {
+		"start": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others --kill-others-on-fail",
+		"start-front": "react-app-rewired start",
+		"start-server": "nodemon server/app.js --watch server/*",
+		"build": "react-app-rewired build",
+		"test": "react-app-rewired test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			"chrome >= 67",
+			"edge >= 79",
+			"firefox >= 68",
+			"opera >= 54",
+			"safari >= 14"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
